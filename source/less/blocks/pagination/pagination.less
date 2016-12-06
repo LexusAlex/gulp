@@ -1,0 +1,26 @@
+.pagination {
+    text-align: center;
+    padding-left: 0;
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 0.8em 1em;
+    text-decoration: none;
+  }
+  &__link:focus,
+  &__link:hover{
+    background-color: #eee;
+    border-color: #ddd;
+    color: #23527c;
+  }
+  &__link_current,
+  &__link_current:hover,
+  &__link_current:focus{
+    background-color: @link-color;
+    color: @gray-lighter;
+  }
+}

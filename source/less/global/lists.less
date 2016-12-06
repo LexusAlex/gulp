@@ -1,0 +1,32 @@
+ul,
+ol {
+  padding-left: 1.8em;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+li {
+  line-height: @line-height;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+
+  @media (min-width: @screen-sm) {
+    margin-left: 1.8em;
+  }
+
+  & + dt {
+    margin-top: (@line-height / 2);
+  }
+}

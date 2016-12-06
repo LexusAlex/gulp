@@ -1,0 +1,98 @@
+// Базовые цвета
+
+@gray-darkest:                #1c1c1c;
+@gray-darker:                 #333333;
+@gray-dark:                   #5f5f5f;
+@gray:                        #808080;
+@gray-light:                  #b1b1b1;
+@gray-lighter:                #eceeef;
+@gray-lightest:               #f7f7f9;
+
+@color-main:                  #0275d8;
+@color-success:               #5cb85c;
+@color-danger:                #d9534f;
+
+// Семантические цвета
+@text-color:                  @gray-darker;
+@text-color--muted:           @gray;
+@body-bg:                     #fff;
+
+@link-color:                  @color-main;
+@link-color--hover:           darken(@color-main, 15%);
+
+@border-color:                @gray-light;
+
+
+
+// Базовая типографика (<=479: 1 rem = 8px, >=480: 1rem = 10px)
+// Для лёгкого пересчёта: http://pxtoem.com/
+
+@font-size:                   1.6rem;
+@font-size--h1:               2.25em;  // 3.6rem;
+@font-size--h2:               1.875em; // 3rem;
+@font-size--h3:               1.5em;   // 2.4rem;
+@font-size--h4:               1.25em;  // 2.0rem;
+@font-size--h5:               1em;     // 1.6rem
+@font-size--h6:               1em;     // 1.6rem
+@font-size--small:            0.75em;
+@font-size--small-percent:    75%;
+
+@line-height:                 1.375em;
+
+@font-family:                 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+@font-family--serif:          Georgia, 'Times New Roman', Times, serif;
+@font-family--monospace:      Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+@font-family--headings:       'Ubuntu','Helvetica Neue', Arial, sans-serif;;
+
+
+
+// Модульная сетка
+
+@grid-columns:                12;
+@grid-gutter-width:           3rem;
+
+
+/*@screen-xs 	0 	XS
+  @screen-sm 	480 	SM
+  @screen-md 	768 	MD
+  @screen-lg 	992 	LG
+  @screen-xl 	1200 	XL
+  @screen-xxl 	1800 	XXL
+*/
+// Ширины
+
+@screen-xs:                   0;
+@screen-sm:                   480px;
+@screen-md:                   768px;
+@screen-lg:                   992px;
+@screen-xl:                   1200px;
+@screen-xxl:                  1800px;
+
+@container-sm:                100%;
+@container-md:                100%;
+@container-lg:                @screen-lg - 30;
+@container-xl:                @screen-xl - 30;
+@container-xxl:               @screen-xxl - 30;
+
+
+
+// Z-index
+
+@z-index-dropdown:            10;
+
+
+
+// Формы, кнопки
+
+@field-padding-top:           0.313em;
+@field-padding-bottom:        0.313em;
+@field-padding-horizontal:    0.438em;
+
+
+
+// Разное
+
+@border-radius:               0.3rem;
+@opacity:                     0.7;
+@transition-time:             0.3s;
+@shadow:                      0 4px 2px -2px rgba(0, 0, 0, 0.3);

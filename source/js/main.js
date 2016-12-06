@@ -1,7 +1,4 @@
-import * as newer from './newr';
-/*
-var one = require("./one");
-var two = require("./two");
-*/
+import * as nav from './nav';
+//import {nav as n} from './nav';
 
-newer.m();
+nav.g();

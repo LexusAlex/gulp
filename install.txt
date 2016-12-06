@@ -1,4 +1,4 @@
-npm install --save-dev gulp gulp-watch gulp-autoprefixer gulp-uglify gulp-less gulp-sourcemaps gulp-rigger gulp-rename gulp-imagemin imagemin-pngquant rimraf browser-sync gulp-cssmin gulp-concat gulp-debug gulp-if gulp-newer gulp-remember path gulp-notify babelify browserify vinyl-buffer vinyl-source-stream babel-preset-es2015
+npm install --save-dev gulp gulp-watch gulp-autoprefixer gulp-uglify gulp-less gulp-sourcemaps gulp-rigger gulp-rename gulp-imagemin imagemin-pngquant rimraf browser-sync gulp-cssmin gulp-concat gulp-debug gulp-if gulp-newer gulp-remember path gulp-notify babelify browserify vinyl-buffer vinyl-source-stream babel-preset-es2015 css-mqpacker gulp-filter gulp-order main-bower-files
 
 версия 4 пока beta так что глобально и локально ставим версию 3.9.1
 

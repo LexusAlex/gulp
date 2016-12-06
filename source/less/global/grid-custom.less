@@ -1,0 +1,43 @@
+.block-name-1 {
+  .row();
+  &__element {
+    // @media, количество колонок для ячейки, всего колонок, промежуток между ячейками
+    .col(xs,1,12,3rem)
+    }
+}
+
+.block-name-2 {
+  .row();
+  &__element {
+    // @media, количество колонок для ячейки, всего колонок, промежуток между ячейками
+    .col(xs,6,12,3rem);
+    .col(sm,4,12,3rem);
+    .col(md,2,12,3rem);
+    .col(lg,1,12,3rem);
+  }
+}
+
+.block-name-3 {
+  .row();
+  &__element {
+    // @media, количество колонок для ячейки, всего колонок, промежуток между ячейками
+    .col(xs,1,12,0)
+  }
+}
+
+.block-name-4 {
+  .row(1rem, 1.8rem, 2rem, @grid-gutter-width, 4rem, 5rem);
+  &__element {
+    .col(xs, 6, @grid-columns, 1rem);
+    .col(sm, 6, @grid-columns, 1.8rem);
+    .col(md, 6, @grid-columns, 2rem);
+    .col(lg, 6, @grid-columns, @grid-gutter-width);
+    .col(xl, 6, @grid-columns, 4rem);
+    .col(xxl, 6, @grid-columns, 5rem);
+  }
+}
+
+  .selector {
+    .hidden-up(lg);   // Скрыть на LG (включительно) и более широких
+    .hidden-down(sm); // Скрыть на SM (включительно) и более узких
+    }

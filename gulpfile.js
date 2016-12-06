@@ -20,10 +20,15 @@ var browserSync = require("browser-sync").create();
 var reload = browserSync.reload;// перезагружаем страничку
 var notify = require('gulp-notify'); // для вывода сообщений об ошибке
 var uglify = require('gulp-uglify'); // для склейки js
-var babelify   = require('babelify'); //
-var browserify = require('browserify'); //
-var buffer = require('vinyl-buffer'); //
+var babelify   = require('babelify'); // для преобразования es6 в старый вариант
+var browserify = require('browserify'); // для преобразования модулей в браузерочитаемый вариант
+var buffer = require('vinyl-buffer'); // буфер для буфера less
 var source = require('vinyl-source-stream');//
+var mqpacker = require('css-mqpacker');// упорядочивание стилей
+var transpile  = require('gulp-es6-module-transpiler'); // транспайлер es6
+var filter = require('gulp-filter');
+var order = require('gulp-order');
+var mainBowerFiles = require('main-bower-files');
 
 // задачи
 gulp.task('task1', function (callback) {
@@ -50,6 +55,7 @@ var path = {
     source: { //Пути откуда брать исходники
         html: 'source/html/index.html',
         js: 'source/js/main.js',
+        jsVendor: 'source/js/vendor.js',
         styles: 'source/less/style.less',
         images: 'source/images/**/*.*' //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
     },
@@ -63,7 +69,7 @@ var path = {
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'source/**/*.html',
         js: 'source/js/**/*.js',
-        styles: 'source/less/**/*.less',
+        styles: 'source/less/**/**/*.less',
         images: 'source/images/**/*.*'
     }
 };
@@ -86,8 +92,8 @@ gulp.task('css', function () {
             }
         }))
         .pipe(prefixer()) // добавляем префиксы
-        .pipe(cssmin()) // сжимаем
-        .pipe(rename("style.min.css")) // переименовываем
+        //.pipe(cssmin()) // сжимаем
+       // .pipe(rename("style.min.css")) // переименовываем
         .pipe(gulp.dest(path.dest.styles)) // и пишем в public
         .pipe(reload({stream: true})); // перезагрузим сервер
 });
@@ -180,6 +186,16 @@ gulp.task('browserify', function () {
                 .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 
+// js Vendor для сторонних библиотек
+gulp.task('js:vendor', function () {
+    gulp.src(path.source.jsVendor) //Найдем наш main файл
+    .pipe(rigger()) //Прогоним через rigger
+        .pipe(uglify()) //Сожмем наш js
+        .pipe(rename("vendor.min.js")) //Перименуем
+        .pipe(gulp.dest(path.dest.js)) //Выплюнем готовый файл
+        .pipe(reload({stream: true})); //И перезагрузим сервер
+});
+
 // слеженние за измененными файлами
 // gulp.watch('js/**/*.js', ['uglify','reload']);
 /*
@@ -200,7 +216,8 @@ gulp.task('watch', function () {
 gulp.task('build', [
     'html',
     'css',
-    'images'
+    'images',
+    //'js'
 ]);
 // конфиг сервера
 var config = {
@@ -210,7 +227,8 @@ var config = {
     //tunnel: true,
     host: 'localhost',
     port: 9000,
-    logPrefix: "Gulp-project"
+    logPrefix: "Gulp-project",
+    notify: false
 };
 // browser-sinc
 gulp.task('server', function () {

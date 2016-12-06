@@ -1,13 +1,146 @@
-/* Стили */
-body {
-  background-color: #fa9937;
-  display: flex;
-  font-size: large;
+/*	Это	стандартный	однострочный	комментарий	для	CSS	*/
+//	Это	препроцессорный	однострочный комментарий который не сохраняется в css
+/*!	Комментарий,который	будет всегда	сохраняться	*/
+/*
+		//	Смешивание	комментариев
+*/
+
+/* вложенные селекторы */
+.class-1	{
+  background-color: #1c1c1c;
+  .class-2	{
+    background-color: #1c1c1c;
+  }
+  .class-3	{
+    background-color: #1c1c1c;
+  }
 }
-h1 {
-  font-size: 20em;
+// некий каскад
+/* интуитивно понятная структура на выходе*/
+/* следить за	тем,	чтобы	структура,	в	общем	случае,	не	превышала	трёх	вложений*/
+.class-4 {
+  background-color: #0275d8;
+  .class-5 {
+    background-color: yellow;
+    .class-6 {
+      background-color: #5cb85c;
+      .class-7 {
+        background-color: #b1b1b1;
+      }
+    }
+  }
 }
-section {
-  padding: 5px;
-  background-color: #ff3357;
+/* & - ссылка на родителя - удобно ссылаться на родительский элемент */
+a	{
+  color:	#777;
+  text-decoration:	none;
+  &:hover	{
+    color:	#a31515;
+  }
+  &:visited	{
+    color: #7fa36c;
+  }
+  &:focus	{
+    color: #32a331;
+  }
+  &:active	{
+    color: #97a34c;
+  }
 }
+/* или так */
+.class-8	{
+  background-color:	#fff;
+  &.class-8	{
+    color:	#000;
+  }
+}
+/* еще так */
+.class-9	{
+  background-color:	#fff;
+  .class-10 &	{
+    color:	#000;
+  }
+}
+/*склеивание селекторов*/
+.button	{
+  background-color:	#ddd;
+  color:	#000;
+  &-add,
+  &-remove	{
+    color:	#fff;
+  }
+  &-add	{	background-color:	green;	}
+  &-remove	{	background-color:	red;	}
+}
+/*еще пример */
+.header	{
+  .item	{
+    &	+	&	{
+      color:	red;
+    }
+    &	&	{
+      color:	green;
+    }
+    &&	{
+      color:	blue;
+    }
+    &,	&-box	{
+      color:	yellow;
+    }
+  }
+}
+
+/* группировка :extend()*/
+.class-11	{
+  background-color:	#fff;
+  color:	#000;
+}
+.class-12:extend(.class-11)	{}
+.class-13	{
+  &:extend(.class-11);
+}
+/*и еще пример групировки*/
+.class-14	{	background-color:	#fff;	}
+.class-15	{	background-color:	#fff;	}
+.selector	{
+  &:extend(.class-14,	.class-15);
+}
+/*расширение правил*/
+.global-header	{
+  background-color:	#fff;
+  color:	#000;
+}
+.global-navigation {
+  &:extend(.global-header);
+}
+/* */
+.global-footer	{
+  &:extend(.global-header all);
+}
+/* медиавыражения */
+
+.class	{
+  .two	{
+    @media	(min-width:	992px)	{
+      display:	none;
+      //	какие-то	другие	стили
+    }
+  }
+}
+
+/*вложенные выражения*/
+.one	{
+  @media	(min-width:	768px)	{
+    background-color:	#f5f5f5;
+    .two	{
+      @media	(max-width:	992px)	{
+        color:	#000;
+      }
+    }
+  }
+}
+/*импорт файлов
+@import	"import/_mail.css"; как css фаил без компиляции
+*/
+
+

@@ -2,17 +2,364 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index.html</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Developer's blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700|Ubuntu:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     //= header.html
+    <main class="container" role="main">
+        <div class="row">
+            <section class="row__left">
+                <article class="article" role="article">
+                    <header>
+                        <h2><a href="#">Большое название статьи в несколько строк в несколько строк</a></h2>
+                        <div class="row">
+                            <div class="row__time">
+                                <div class="article__time">
+                                    <em>
+                                        <time datetime="2014-01-17">17 Января 2014</time>
+                                    </em>
+                                </div>
+                            </div>
+                            <div class="row__time">
+                                <div class="article__category">
+                                    <em>
+                                        <a href="">Программирование</a>
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <p>Программист пишет код в рамках поставленной задачи. В его задачи не входит разрабатывать логику проекта в целом, его главная задача сделать так, чтобы это работало, а по возможности, чтобы хорошо работало.
+                            Разработчик может как писать код, так и разрабатывать весь проект в целом: начиная от самостоятельного программирования/проектирования исходных частей проекта, заканчивая координацией проекта и управлением программистами, дизайнерами, PR-менеджерами и тд.
+                            <strong>Заголовок</strong>
+                        </p>
+                    </header>
+                    <footer>
+                        <a class="button button--main button--sm button--block" href="">Читать далее</a>
+                        <div class="alert">
+                            <span>Теги:</span>
+                            <a class="button button--sm" href="">PHP</a>
+                            <a class="button button--sm" href="">Javascript</a>
+                        </div>
+                    </footer>
+                </article>
+                <article class="article" role="article">
+                    <header>
+                        <h2><a href="#">Название статьи</a></h2>
+                        <div class="row">
+                            <div class="row__time">
+                                <div class="article__time">
+                                    <em>
+                                        <time datetime="2014-01-17">17 Января 2014</time>
+                                    </em>
+                                </div>
+                            </div>
+                            <div class="row__time">
+                                <div class="article__category">
+                                    <em>
+                                        <a href="">Программирование</a>
+                                    </em>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <p>Программист пишет код в рамках поставленной задачи. В его задачи не входит разрабатывать логику проекта в целом, его главная задача сделать так, чтобы это работало, а по возможности, чтобы хорошо работало.
+                            Разработчик может как писать код, так и разрабатывать весь проект в целом: начиная от самостоятельного программирования/проектирования исходных частей проекта, заканчивая координацией проекта и управлением программистами, дизайнерами, PR-менеджерами и тд.
+                            <strong>Заголовок</strong>
+                        </p>
+                    </header>
+                    <footer>
+                        <a class="button button--main button--sm button--block" href="">Читать далее</a>
+                        <div class="alert">
+                            <span>Теги:</span>
+                            <a class="button button--sm" href="">PHP</a>
+                            <a class="button button--sm" href="">Javascript</a>
+                        </div>
+                    </footer>
+                </article>
+                <nav class="alert" role="navigation">
+                    <ul class="pagination">
+                        <li class="pagination__item"><a href="#" class="pagination__link pagination__link_first"> << first</a></li>
+                        <li class="pagination__item"><a href="#" class="pagination__link pagination__link_prev"> < prev</a></li>
+                        <li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
+                        <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+                        <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+                        <li class="pagination__item"><a href="#" class="pagination__link pagination__link_current">4</a></li>
+                        <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+                        <li class="pagination__item"><a href="#" class="pagination__link pagination__link_next">next ></a></li>
+                        <li class="pagination__item"><a href="#" class="pagination__link pagination__link_last">last >></a></li>
+                    </ul>
+                </nav>
+            </section>
+            <aside class="row__right">
+                <div class="alert">
+                    <div class="alert__header">Последние записи</div>
+                    <p>
+                        <a class="alert__link" href="">Название статьи</a>
+                    </p>
+                    <p>
+                        <a class="alert__link" href="">Название статьи</a>
+                    </p>
+                </div>
 
-    <section class="content">
-        Content My 100
-    </section>
+                <div class="alert">
+                    <div class="alert__header">Категории</div>
+                    <p>
+                        <a class="alert__link" href="">Категория 1</a>
+                    </p>
+                    <p>
+                        <a class="alert__link" href="">Категория 2</a>
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
 
+    <!--<div class="container">
+        <pre>
+            <code>
+            xs - 0 - 480px <br>
+            sm - 480px - 768px <br>
+            md - 768px - 992px <br>
+            lg - 992px - 1200px <br>
+            xl - 1200px - 1800px <br>
+            xxl - 1800px - ...
+            </code>
+        </pre>
+        <h2>Отступ по умолчанию одинаковый везде 15px размер колонки 8%</h2>
+        <div class="block-name-1">
+            <div class="block-name-1__element"><div class="test">01</div></div>
+            <div class="block-name-1__element"><div class="test">02</div></div>
+            <div class="block-name-1__element"><div class="test">03</div></div>
+            <div class="block-name-1__element"><div class="test">04</div></div>
+            <div class="block-name-1__element"><div class="test">05</div></div>
+            <div class="block-name-1__element"><div class="test">06</div></div>
+            <div class="block-name-1__element"><div class="test">07</div></div>
+            <div class="block-name-1__element"><div class="test">08</div></div>
+            <div class="block-name-1__element"><div class="test">09</div></div>
+            <div class="block-name-1__element"><div class="test">10</div></div>
+            <div class="block-name-1__element"><div class="test">11</div></div>
+            <div class="block-name-1__element"><div class="test">12</div></div>
+        </div>
+
+        <h2>Отступ разный</h2>
+        <div class="block-name-2">
+            <div class="block-name-2__element"><div class="test">01</div></div>
+            <div class="block-name-2__element"><div class="test">01</div></div>
+            <div class="block-name-2__element"><div class="test">01</div></div>
+            <div class="block-name-2__element"><div class="test">01</div></div>
+            <div class="block-name-2__element"><div class="test">01</div></div>
+            <div class="block-name-2__element"><div class="test">01</div></div>
+            <div class="block-name-2__element"><div class="test">01</div></div>
+            <div class="block-name-2__element"><div class="test">01</div></div>
+            <div class="block-name-2__element"><div class="test">01</div></div>
+            <div class="block-name-2__element"><div class="test">01</div></div>
+            <div class="block-name-2__element"><div class="test">01</div></div>
+            <div class="block-name-2__element"><div class="test">01</div></div>
+        </div>
+
+        <h2>нет отступа</h2>
+        <div class="block-name-3">
+            <div class="block-name-3__element"><div class="test">01</div></div>
+            <div class="block-name-3__element"><div class="test">01</div></div>
+            <div class="block-name-3__element"><div class="test">01</div></div>
+            <div class="block-name-3__element"><div class="test">01</div></div>
+            <div class="block-name-3__element"><div class="test">01</div></div>
+            <div class="block-name-3__element"><div class="test">01</div></div>
+            <div class="block-name-3__element"><div class="test">01</div></div>
+            <div class="block-name-3__element"><div class="test">01</div></div>
+            <div class="block-name-3__element"><div class="test">01</div></div>
+            <div class="block-name-3__element"><div class="test">01</div></div>
+            <div class="block-name-3__element"><div class="test">01</div></div>
+            <div class="block-name-3__element"><div class="test">01</div></div>
+        </div>
+
+        <h2>На всех контрольных точках разный отступ</h2>
+        <div class="block-name-4">
+            <div class="block-name-4__element"><div class="test">01</div></div>
+            <div class="block-name-4__element"><div class="test">01</div></div>
+            <div class="block-name-4__element"><div class="test">01</div></div>
+            <div class="block-name-4__element"><div class="test">01</div></div>
+            <div class="block-name-4__element"><div class="test">01</div></div>
+            <div class="block-name-4__element"><div class="test">01</div></div>
+            <div class="block-name-4__element"><div class="test">01</div></div>
+            <div class="block-name-4__element"><div class="test">01</div></div>
+            <div class="block-name-4__element"><div class="test">01</div></div>
+            <div class="block-name-4__element"><div class="test">01</div></div>
+            <div class="block-name-4__element"><div class="test">01</div></div>
+            <div class="block-name-4__element"><div class="test">01</div></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"><div class="test">01</div></div>
+            <div class="col-md-3"><div class="test">02</div></div>
+            <div class="col-md-3"><div class="test">03</div></div>
+            <div class="col-md-3"><div class="test">04</div></div>
+        </div>
+    </div>
+    <div><a href="">ссылка</a></div>
+    <h1>Большой заголовок 1 <small>Еще заголовок</small></h1>
+    <h2>Header-2 <small>Еще заголовок</small></h2>
+    <h3>Header-3 <small>Еще заголовок</small></h3>
+    <h4>Header-4 <small>Еще заголовок</small></h4>
+    <h5>Header-5 <small>Еще заголовок</small></h5>
+    <h6>Header-6 <small>Еще заголовок</small></h6>
+    <pre>
+        text
+        text
+        <code>code</code>
+        <mark>mark</mark>
+        <br>
+        //еще строка
+    </pre>
+    <blockquote>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque esse itaque officia quisquam rerum? Consequuntur deleniti ea enim, ex hic illo labore magnam minima molestiae, nostrum qui quibusdam quo repellendus tempore tenetur vero voluptas voluptate voluptatibus! Maxime, quo, totam! Assumenda autem eius, non porro quia repellat similique ut voluptate?
+
+        </p>
+        <ul>
+            <li>1</li>
+        </ul>
+        <footer>footer</footer>
+    </blockquote>
+    <p>
+        paragraph
+    </p>
+    <pre>
+          margin-bottom: 1.375em;
+  border: 0;
+  border-top: 1px solid #b1b1b1;
+}
+small {
+  font-size: 75%;
+}
+sub,
+sup {
+  font-size: 70%;
+}
+mark {
+  background: #fcf8e3;
+  padding: 0.1em 0.3em;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+blockquote {
+  padding: 0 0 0 0.5em;
+  margin-left: 0;
+  margin-right: 0;
+  border-left: 1px solid #b1b1b1;
+}
+@media (min-width: 480px) {
+  blockquote {
+    padding: 0 0 0 1.8em;
+    margin-left: 0;
+    border-left-width: 5px;
+  }
+}
+blockquote p:first-child,
+blockquote ul:first-child,
+blockquote ol:first-child {
+  margin-top: 0;
+}
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+blockquote footer {
+  text-align: right;
+  color: #808080;
+}
+code,
+kbd,
+pre,
+    </pre>
+
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, ex inventore pariatur perferendis praesentium quas repudiandae suscipit tenetur ullam voluptatibus. Architecto asperiores autem dignissimos, distinctio esse explicabo fugiat incidunt ipsam minus nesciunt non odit officiis optio quas quia repellat saepe unde ut velit voluptatibus? Consectetur consequatur illum vero vitae. Alias.</div>
     //= footer.html
+    <hr>
+    <img src="images/border.png" height="235" width="872"/>
+    <ul>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+        <li>item-5</li>
+        <li>item-6</li>
+        <li>item-7</li>
+        <li>item-8</li>
+        <li>item-9</li>
+        <li>item-10</li>
+    </ul>
+    <ol>
+        <li>
+            <ol>
+                <li>1</li>
+                <li>2</li>
+            </ol>
+        </li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+        <li>item-5</li>
+        <li>item-6</li>
+        <li>item-7</li>
+        <li>item-8</li>
+        <li>item-9</li>
+        <li>item-10</li>
+    </ol>
+    <dl>
+        <dt>Термин</dt>
+        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda atque cupiditate distinctio dolorem earum est facilis harum, non odit, possimus sed, totam voluptas? Culpa fugiat officiis perferendis quos voluptates?</dd>
+        <dt>Термин</dt>
+        <dd>Определение</dd>
+        <dt>Термин</dt>
+        <dd>Определение</dd>
+        <dt>Термин</dt>
+        <dd>Определение</dd>
+        <dt>Термин</dt>
+        <dd>Определение</dd>
+        <dt>Термин</dt>
+        <dd>Определение</dd>
+        <dt>Термин</dt>
+        <dd>Определение</dd>
+        <dt>Термин</dt>
+        <dd>Определение</dd>
+        <dt>Термин</dt>
+        <dd>Определение</dd>
+        <dt>Термин</dt>
+        <dd>Определение</dd>
+
+    </dl>
+    <hr>
+
+    <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci alias cumque dolore dolores ea eos excepturi illo impedit iusto minus, natus quaerat qui quia saepe, sed sunt tenetur, vitae.</small>
+    <strong>действительно значимый текст</strong>
+    <b>просто выделенный текст, лид</b>
+    <i>иностранное слово или термин</i>
+    <em>эмфатическое ударение</em>
+    <s>информация, утратившая актуальность</s>
+    <del>изменение, внесённое в документ (удаление)</del>
+    <ins>изменение, внесённое в документ (добавление)</ins>
+    <mark>акцент маркерным выделением</mark>
+    <abbr title="Аббревиатура">АББРЕВИАТУРА</abbr>
+    <kbd>Ctrl + C</kbd>
+    2
+    <sup>3</sup>
+    H
+    <sub>2</sub>
+    O
+    <code>code</code>-->
     <script src="js/main.min.js"></script>
 </body>
 </html>

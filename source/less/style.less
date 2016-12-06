@@ -1,2 +1,22 @@
-@import 'global';
-@import 'blocks';
+
+//переменные, миксины
+@import 'variables';
+@import 'mixins';
+
+// общие стили
+@import (less) "../../bower_components/normalize.css/normalize.css";
+@import 'global/main';
+@import 'global/typography';
+@import 'global/lists';
+@import 'global/print';
+//@import 'global/grid-default';
+//@import 'global/grid-custom';
+@import 'global/grid-project';
+
+// Бэм блоки
+@import "blocks/header/header";
+@import "blocks/main-nav/main-nav";
+@import "blocks/alert/alert";
+@import "blocks/article/article";
+@import "blocks/button/button";
+@import "blocks/pagination/pagination";
